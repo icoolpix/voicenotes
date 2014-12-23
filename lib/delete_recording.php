@@ -17,17 +17,23 @@ if($_POST) {
 	$q = $db->get('notes');
 	foreach($q as $r) {
 		$name = $r['audio_file'];
-		if(unlink('../' . RECORD_DIR . $name)) {
-			//delete from db
-			$db->where('id', $id);
-			if($db->delete('notes')) {
-				echo 'Recording deleted!';
-			} else {
-				echo 'Error deleting file';
-			}
+		$file = '../' . RECORD_DIR . $name;
 
+		if(file_exists($file)) {
+			if(unlink($file)) {
+				//delete from db
+				$db->where('id', $id);
+				if($db->delete('notes')) {
+					echo 'Recording deleted!';
+				} else {
+					echo 'Error deleting file';
+				}
+
+			} else {
+				echo "ERROR! Unable to delete file. Make sure you have permission";
+			}
 		} else {
-			echo 'ERROR! File not found!' . $id;
+			echo 'ERROR! File not found!';
 		}
 	}
 }

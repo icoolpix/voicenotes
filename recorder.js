@@ -196,6 +196,7 @@
                 }).done(function (data) {
                     //console.log(data);
                     // log.innerHTML += "\n" + data;
+                    log.innerHTML+="\n Added to database";
                 });
 
             };
