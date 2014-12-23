@@ -2,12 +2,6 @@
  * Created by John on 12/22/2014.
  */
 
-$('button').click(function () {
-    var audio = $(this).attr('id');
-    $('.player').html('<audio src="recordings/' + audio + '"controls="" autoplay=""></audio>');
-});
-
-
 function __log(e, data) {
     log.innerHTML += "\n" + e + " " + (data || '');
 }
@@ -30,6 +24,7 @@ function startRecording(button) {
     __log('Recording...');
 
 }
+
 function stopRecording(button) {
     recorder && recorder.stop();
 
@@ -65,6 +60,15 @@ function createDownloadLink() {
     });
 }
 window.onload = function init() {
+    //stop button hidden by default
+    $('.stopRec').hide();
+    
+    $('.startRec').click(function(){
+        $('.stopRec').show();
+    });
+    //load recordings
+    $('.recordings').html('<img src="./assets/img/loader.gif"/>please wait...').load('./lib/recordings.php');
+    
     try {
         // webkit shim
         window.AudioContext = window.AudioContext || window.webkitAudioContext;

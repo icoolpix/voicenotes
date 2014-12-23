@@ -121,7 +121,13 @@
                         hf.innerHTML = hf.download;
                         li.appendChild(au);
                         li.appendChild(hf);
-                        //recordingslist.appendChild(li);
+                        //recordingslist.appendChild(li); 
+                        
+                        //reload results
+                        //todo load the newly created file without refresh
+                        
+                        var loader= '<img src="./assets/img/loader.gif"/>please wait...';
+                        $('.recordings').html(loader).hide().show().load('./lib/recordings.php');
 
                     }
                 };
@@ -130,6 +136,8 @@
             fileReader.readAsArrayBuffer(blob);
 
             currCallback(blob);
+            
+            
         }
 
 
@@ -196,7 +204,7 @@
                 }).done(function (data) {
                     //console.log(data);
                     // log.innerHTML += "\n" + data;
-                    log.innerHTML+="\n Added to database";
+                    log.innerHTML+="\nAdded to database";
                 });
 
             };
@@ -223,29 +231,3 @@
 
 
 })(window);
-
-
-//delete recording
-$('.deleteRecording').click(function () {
-    if (confirm('Recording will be delete permanently. ')) {
-        var id = $(this).attr('id');
-        //var data = {note_id: id};
-        $(this).closest('tr').fadeOut('slow');
-
-        var dt = new FormData();
-        dt.append('note_id', id);
-        // fd.append('card', card_id);
-        dt.append('data', event.target.result);
-
-        $.ajax({
-            type: 'POST',
-            url: 'lib/delete_recording.php',
-            data: dt,
-            processData: false,
-            contentType: false
-        }).done(function (data) {
-            //console.log(data);
-            log.innerHTML += "\n" + data;
-        });
-    }
-});
