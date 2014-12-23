@@ -13,3 +13,5 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `date_created` varchar(20) NOT NULL
 );
 <pre>
+
+<p><a href="http://icoolpix.com" target="_blank">iCoolPix Designs</a>
