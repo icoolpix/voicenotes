@@ -1,0 +1,4 @@
+.git/*
+.idea/*
+.recordings/*.mp3
+.recordings/*.wav
