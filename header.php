@@ -24,11 +24,10 @@
 
 	<link rel="shortcut icon" href="assets/img/favicon.ico" />
 	<!-- Bootstrap Core CSS -->
-	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link href="assets/css/style.css" rel="stylesheet">
 
-	<script src="assets/js/jquery-1.11.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="assets/js/global.js"></script>
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
