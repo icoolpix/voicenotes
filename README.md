@@ -1,4 +1,5 @@
 <strong>Voicenotes</strong>
+<img src="https://github.com/icoolpix/voicenotes/blob/master/screenshot.PNG"/>
 <p>
 Record notes right from your browser!</p>
 <p>This script can be integrated in your project or used as standalone to record voice notes</p>
