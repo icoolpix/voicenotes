@@ -1,0 +1,26 @@
+.wrapper{
+    margin: 0 auto;
+}
+.cursor {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+#recordingslist audio {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.record-log {
+
+}
+pre{
+    overflow:auto;
+    background: #333;
+    color:#fff;
+    padding:5px;
+    font-family: monospace;
+}
