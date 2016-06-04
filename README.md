@@ -1,4 +1,8 @@
 <strong>Voicenotes</strong>
+
+=======
+<img src="https://github.com/icoolpix/voicenotes/blob/master/screenshot.PNG"/>
+
 <p>
 Record notes right from your browser!</p>
 <p>This script can be integrated in your project or used as standalone to record voice notes</p>
@@ -14,4 +18,5 @@ CREATE TABLE IF NOT EXISTS `notes` (
 );
 <pre>
 
-<p><a href="http://icoolpix.com" target="_blank">iCoolPix Designs</a>
+<p><a href="http://amdtllc.com" target="_blank">JMuchiri</a>
+
