@@ -1,7 +1,7 @@
 <strong>Voicenotes</strong>
 
 =======
-<img src="https://github.com/icoolpix/voicenotes/blob/master/screenshot.PNG"/>
+![screenshot](screenshot.png)
 
 <p>
 Record notes right from your browser!</p>
@@ -16,7 +16,4 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `audio_file` varchar(100) NOT NULL,
   `date_created` varchar(20) NOT NULL
 );
-<pre>
-
-<p><a href="http://amdtllc.com" target="_blank">JMuchiri</a>
-
+<pre> 
